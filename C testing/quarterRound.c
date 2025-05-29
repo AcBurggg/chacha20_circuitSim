@@ -35,24 +35,6 @@ int main() {
     quarterRound(a, b, c, d);
 
 
-    // //testing rotation subcircuits//
-    // uint32_t test = 0x12347654;
-    // test = ROTL(test, 16);
-    // printf("test rotated 16: %x\n", test);
-
-    // test = 0x12347654;
-    // test = ROTL(test, 12);
-    // printf("test rotated 12: %x\n", test);
-
-    // test = 0x12347654;
-    // test = ROTL(test, 8);
-    // printf("test rotated 8: %x\n", test);
-
-    // test = 0x12347654;
-    // test = ROTL(test, 7);
-    // printf("test rotated 7: %x\n", test);
-
-
 
     return 0; 
 }
