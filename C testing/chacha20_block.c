@@ -17,6 +17,14 @@ void chacha_block(uint32_t out[16], uint32_t const in[16])
 	for (i = 0; i < 16; ++i)
 		x[i] = in[i];
 	// 10 loops × 2 rounds/loop = 20 rounds
+
+	printf("Input State\n");
+	for (int i = 0; i < 16; i++) {
+		printf("%x ", x[i]);
+		if ((i + 1) % 4 == 0) printf("\n");
+	}
+	printf("\n");
+
 	for (i = 0; i < ROUNDS; i += 2) {
 		// Odd round
 		QR(x[0], x[4], x[ 8], x[12]); // column 1
@@ -29,9 +37,26 @@ void chacha_block(uint32_t out[16], uint32_t const in[16])
 		QR(x[2], x[7], x[ 8], x[13]); // diagonal 3
 		QR(x[3], x[4], x[ 9], x[14]); // diagonal 4
 	}
-	for (i = 0; i < 16; ++i)
+	printf("Output State Before Addition\n");
+	for (int i = 0; i < 16; i++) {
+		printf("%x ", x[i]);
+		if ((i + 1) % 4 == 0) printf("\n");
+	}
+	printf("\n");
+
+
+	for (i = 0; i < 16; ++i){
 		out[i] = x[i] + in[i];
+	}
+	
+	printf("Output State After Addition\n");
+	for (int i = 0; i < 16; i++) {
+		printf("%x ", out[i]);
+		if ((i + 1) % 4 == 0) printf("\n");
+	}
+	printf("\n");
 }
+
 
 int main() {
 	//input state is composed of all little endian unsigned integers. 
@@ -80,9 +105,4 @@ int main() {
 
 	uint32_t out[16];
 	chacha_block(out, initialState);
-
-	for(int i = 0; i < 16; i++) {
-		printf("%x ", out[i]);
-		if ((i + 1) % 4 == 0) printf("\n");
-	}
 }
