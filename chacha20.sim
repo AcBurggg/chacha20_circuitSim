@@ -7,18 +7,6 @@
       "name": "main",
       "components": [
         {
-          "name": "com.ra4king.circuitsim.gui.peers.memory.ROMPeer",
-          "x": 55,
-          "y": 34,
-          "properties": {
-            "Label location": "NORTH",
-            "Contents": "00000001 00000000 14-0",
-            "Label": "",
-            "Bitsize": "32",
-            "Address bits": "1"
-          }
-        },
-        {
           "name": "com.ra4king.circuitsim.gui.peers.io.HexDisplay",
           "x": 29,
           "y": 263,
@@ -1168,18 +1156,6 @@
           "properties": {
             "Label location": "NORTH",
             "Label": ""
-          }
-        },
-        {
-          "name": "com.ra4king.circuitsim.gui.peers.memory.ROMPeer",
-          "x": 8,
-          "y": 56,
-          "properties": {
-            "Label location": "NORTH",
-            "Contents": "6b206574 00000000 14-0",
-            "Label": "constant_3",
-            "Bitsize": "32",
-            "Address bits": "1"
           }
         },
         {
@@ -1448,6 +1424,19 @@
             "Direction": "NORTH",
             "Width": "8",
             "Bitsize": "32"
+          }
+        },
+        {
+          "name": "com.ra4king.circuitsim.gui.peers.wiring.ConstantPeer",
+          "x": 10,
+          "y": 20,
+          "properties": {
+            "Label location": "NORTH",
+            "Label": "key_4",
+            "Value": "13121110",
+            "Direction": "EAST",
+            "Bitsize": "32",
+            "Base": "HEXADECIMAL"
           }
         },
         {
@@ -3210,18 +3199,6 @@
           }
         },
         {
-          "name": "com.ra4king.circuitsim.gui.peers.memory.ROMPeer",
-          "x": 29,
-          "y": 19,
-          "properties": {
-            "Label location": "NORTH",
-            "Contents": "17161514 00000000 14-0",
-            "Label": "key_1",
-            "Bitsize": "32",
-            "Address bits": "1"
-          }
-        },
-        {
           "name": "com.ra4king.circuitsim.gui.peers.SubcircuitPeer",
           "x": 44,
           "y": 88,
@@ -3232,89 +3209,24 @@
           }
         },
         {
-          "name": "com.ra4king.circuitsim.gui.peers.misc.Text",
-          "x": 48,
-          "y": 30,
-          "properties": {
-            "Text": "Counter \u003d one 32-bit unsigned int"
-          }
-        },
-        {
           "name": "com.ra4king.circuitsim.gui.peers.wiring.ConstantPeer",
-          "x": 5,
-          "y": 34,
-          "properties": {
-            "Label location": "NORTH",
-            "Label": "",
-            "Value": "0",
-            "Direction": "EAST",
-            "Bitsize": "1",
-            "Base": "BINARY"
-          }
-        },
-        {
-          "name": "com.ra4king.circuitsim.gui.peers.wiring.ConstantPeer",
-          "x": 5,
-          "y": 42,
-          "properties": {
-            "Label location": "NORTH",
-            "Label": "",
-            "Value": "0",
-            "Direction": "EAST",
-            "Bitsize": "1",
-            "Base": "BINARY"
-          }
-        },
-        {
-          "name": "com.ra4king.circuitsim.gui.peers.wiring.ConstantPeer",
-          "x": 5,
-          "y": 49,
-          "properties": {
-            "Label location": "NORTH",
-            "Label": "",
-            "Value": "0",
-            "Direction": "EAST",
-            "Bitsize": "1",
-            "Base": "BINARY"
-          }
-        },
-        {
-          "name": "com.ra4king.circuitsim.gui.peers.wiring.ConstantPeer",
-          "x": 5,
-          "y": 57,
-          "properties": {
-            "Label location": "NORTH",
-            "Label": "",
-            "Value": "0",
-            "Direction": "EAST",
-            "Bitsize": "1",
-            "Base": "BINARY"
-          }
-        },
-        {
-          "name": "com.ra4king.circuitsim.gui.peers.wiring.ConstantPeer",
-          "x": 7,
+          "x": 71,
           "y": 9,
           "properties": {
             "Label location": "NORTH",
             "Label": "",
-            "Value": "0",
+            "Value": "0f0e0d0c",
             "Direction": "EAST",
-            "Bitsize": "1",
-            "Base": "BINARY"
+            "Bitsize": "32",
+            "Base": "HEXADECIMAL"
           }
         },
         {
-          "name": "com.ra4king.circuitsim.gui.peers.wiring.ConstantPeer",
-          "x": 7,
-          "y": 20,
+          "name": "com.ra4king.circuitsim.gui.peers.misc.Text",
+          "x": 50,
+          "y": 36,
           "properties": {
-            "Label location": "NORTH",
-            "Label": "",
-            "Value": "0",
-            "Direction": "EAST",
-            "Bitsize": "1",
-            "Base": "BINARY"
+            "Text": "Counter \u003d one 32-bit unsigned int"
           }
         },
         {
@@ -3338,136 +3250,6 @@
             "Label location": "NORTH",
             "Label": "",
             "Value": "1",
-            "Direction": "EAST",
-            "Bitsize": "1",
-            "Base": "BINARY"
-          }
-        },
-        {
-          "name": "com.ra4king.circuitsim.gui.peers.wiring.ConstantPeer",
-          "x": 27,
-          "y": 9,
-          "properties": {
-            "Label location": "NORTH",
-            "Label": "",
-            "Value": "0",
-            "Direction": "EAST",
-            "Bitsize": "1",
-            "Base": "BINARY"
-          }
-        },
-        {
-          "name": "com.ra4king.circuitsim.gui.peers.wiring.ConstantPeer",
-          "x": 27,
-          "y": 20,
-          "properties": {
-            "Label location": "NORTH",
-            "Label": "",
-            "Value": "0",
-            "Direction": "EAST",
-            "Bitsize": "1",
-            "Base": "BINARY"
-          }
-        },
-        {
-          "name": "com.ra4king.circuitsim.gui.peers.wiring.ConstantPeer",
-          "x": 36,
-          "y": 49,
-          "properties": {
-            "Label location": "NORTH",
-            "Label": "",
-            "Value": "0",
-            "Direction": "EAST",
-            "Bitsize": "1",
-            "Base": "BINARY"
-          }
-        },
-        {
-          "name": "com.ra4king.circuitsim.gui.peers.wiring.ConstantPeer",
-          "x": 47,
-          "y": 9,
-          "properties": {
-            "Label location": "NORTH",
-            "Label": "",
-            "Value": "0",
-            "Direction": "EAST",
-            "Bitsize": "1",
-            "Base": "BINARY"
-          }
-        },
-        {
-          "name": "com.ra4king.circuitsim.gui.peers.wiring.ConstantPeer",
-          "x": 47,
-          "y": 20,
-          "properties": {
-            "Label location": "NORTH",
-            "Label": "",
-            "Value": "0",
-            "Direction": "EAST",
-            "Bitsize": "1",
-            "Base": "BINARY"
-          }
-        },
-        {
-          "name": "com.ra4king.circuitsim.gui.peers.wiring.ConstantPeer",
-          "x": 53,
-          "y": 35,
-          "properties": {
-            "Label location": "NORTH",
-            "Label": "",
-            "Value": "0",
-            "Direction": "EAST",
-            "Bitsize": "1",
-            "Base": "BINARY"
-          }
-        },
-        {
-          "name": "com.ra4king.circuitsim.gui.peers.wiring.ConstantPeer",
-          "x": 56,
-          "y": 49,
-          "properties": {
-            "Label location": "NORTH",
-            "Label": "",
-            "Value": "0",
-            "Direction": "EAST",
-            "Bitsize": "1",
-            "Base": "BINARY"
-          }
-        },
-        {
-          "name": "com.ra4king.circuitsim.gui.peers.wiring.ConstantPeer",
-          "x": 68,
-          "y": 9,
-          "properties": {
-            "Label location": "NORTH",
-            "Label": "",
-            "Value": "0",
-            "Direction": "EAST",
-            "Bitsize": "1",
-            "Base": "BINARY"
-          }
-        },
-        {
-          "name": "com.ra4king.circuitsim.gui.peers.wiring.ConstantPeer",
-          "x": 68,
-          "y": 20,
-          "properties": {
-            "Label location": "NORTH",
-            "Label": "",
-            "Value": "0",
-            "Direction": "EAST",
-            "Bitsize": "1",
-            "Base": "BINARY"
-          }
-        },
-        {
-          "name": "com.ra4king.circuitsim.gui.peers.wiring.ConstantPeer",
-          "x": 76,
-          "y": 49,
-          "properties": {
-            "Label location": "NORTH",
-            "Label": "",
-            "Value": "0",
             "Direction": "EAST",
             "Bitsize": "1",
             "Base": "BINARY"
@@ -4541,22 +4323,23 @@
         },
         {
           "name": "com.ra4king.circuitsim.gui.peers.misc.Text",
-          "x": 37,
-          "y": 58,
+          "x": 38,
+          "y": 55,
           "properties": {
             "Text": "Different versions use different sizes of counter/nonce. I chose RFC version"
           }
         },
         {
-          "name": "com.ra4king.circuitsim.gui.peers.memory.ROMPeer",
-          "x": 9,
-          "y": 8,
+          "name": "com.ra4king.circuitsim.gui.peers.wiring.ConstantPeer",
+          "x": 59,
+          "y": 49,
           "properties": {
             "Label location": "NORTH",
-            "Contents": "03020100 00000000 14-0",
-            "Label": "key_0",
+            "Label": "nonce_1",
+            "Value": "4a000000",
+            "Direction": "EAST",
             "Bitsize": "32",
-            "Address bits": "1"
+            "Base": "HEXADECIMAL"
           }
         },
         {
@@ -4768,18 +4551,6 @@
           }
         },
         {
-          "name": "com.ra4king.circuitsim.gui.peers.memory.ROMPeer",
-          "x": 9,
-          "y": 19,
-          "properties": {
-            "Label location": "NORTH",
-            "Contents": "13121110 00000000 14-0",
-            "Label": "key_0",
-            "Bitsize": "32",
-            "Address bits": "1"
-          }
-        },
-        {
           "name": "com.ra4king.circuitsim.gui.peers.wiring.ConstantPeer",
           "x": 15,
           "y": 139,
@@ -4793,33 +4564,43 @@
           }
         },
         {
-          "name": "com.ra4king.circuitsim.gui.peers.memory.ROMPeer",
-          "x": 29,
-          "y": 8,
+          "name": "com.ra4king.circuitsim.gui.peers.wiring.ConstantPeer",
+          "x": 58,
+          "y": 41,
           "properties": {
             "Label location": "NORTH",
-            "Contents": "07060504 00000000 14-0",
-            "Label": "key_1",
+            "Label": "key_7",
+            "Value": "1",
+            "Direction": "EAST",
             "Bitsize": "32",
-            "Address bits": "1"
+            "Base": "HEXADECIMAL"
           }
         },
         {
-          "name": "com.ra4king.circuitsim.gui.peers.memory.ROMPeer",
-          "x": 38,
-          "y": 48,
+          "name": "com.ra4king.circuitsim.gui.peers.misc.Text",
+          "x": 46,
+          "y": 13,
+          "properties": {
+            "Text": "in dec. bc/ hex starts with 0b"
+          }
+        },
+        {
+          "name": "com.ra4king.circuitsim.gui.peers.wiring.ConstantPeer",
+          "x": 39,
+          "y": 49,
           "properties": {
             "Label location": "NORTH",
-            "Contents": "09000000 00000000 14-0",
             "Label": "nonce_0",
+            "Value": "09000000",
+            "Direction": "EAST",
             "Bitsize": "32",
-            "Address bits": "1"
+            "Base": "HEXADECIMAL"
           }
         },
         {
           "name": "com.ra4king.circuitsim.gui.peers.wiring.Tunnel",
-          "x": 66,
-          "y": 36,
+          "x": 68,
+          "y": 42,
           "properties": {
             "Label": "counter",
             "Direction": "NORTH",
@@ -4839,18 +4620,6 @@
           }
         },
         {
-          "name": "com.ra4king.circuitsim.gui.peers.memory.ROMPeer",
-          "x": 58,
-          "y": 48,
-          "properties": {
-            "Label location": "NORTH",
-            "Contents": "4a000000 00000000 14-0",
-            "Label": "nonce_1",
-            "Bitsize": "32",
-            "Address bits": "1"
-          }
-        },
-        {
           "name": "com.ra4king.circuitsim.gui.peers.wiring.ClockPeer",
           "x": 54,
           "y": 252,
@@ -4861,15 +4630,16 @@
           }
         },
         {
-          "name": "com.ra4king.circuitsim.gui.peers.memory.ROMPeer",
-          "x": 78,
-          "y": 48,
+          "name": "com.ra4king.circuitsim.gui.peers.wiring.ConstantPeer",
+          "x": 30,
+          "y": 9,
           "properties": {
             "Label location": "NORTH",
-            "Contents": "2-00000000 14-0",
-            "Label": "nonce_2",
+            "Label": "key_1",
+            "Value": "07060504",
+            "Direction": "EAST",
             "Bitsize": "32",
-            "Address bits": "1"
+            "Base": "HEXADECIMAL"
           }
         },
         {
@@ -4914,6 +4684,19 @@
           "y": 29,
           "properties": {
             "Text": "Constant \u003d ASCII value of \"expand 32-byte k\""
+          }
+        },
+        {
+          "name": "com.ra4king.circuitsim.gui.peers.wiring.ConstantPeer",
+          "x": 79,
+          "y": 49,
+          "properties": {
+            "Label location": "NORTH",
+            "Label": "nonce_2",
+            "Value": "00000000",
+            "Direction": "EAST",
+            "Bitsize": "32",
+            "Base": "HEXADECIMAL"
           }
         },
         {
@@ -4964,8 +4747,8 @@
         },
         {
           "name": "com.ra4king.circuitsim.gui.peers.wiring.Probe",
-          "x": 18,
-          "y": 8,
+          "x": 23,
+          "y": 86,
           "properties": {
             "Label location": "NORTH",
             "Label": "",
@@ -4975,181 +4758,14 @@
           }
         },
         {
-          "name": "com.ra4king.circuitsim.gui.peers.wiring.Probe",
-          "x": 18,
-          "y": 19,
+          "name": "com.ra4king.circuitsim.gui.peers.wiring.ConstantPeer",
+          "x": 71,
+          "y": 20,
           "properties": {
             "Label location": "NORTH",
-            "Label": "",
-            "Direction": "SOUTH",
-            "Bitsize": "32",
-            "Base": "HEXADECIMAL"
-          }
-        },
-        {
-          "name": "com.ra4king.circuitsim.gui.peers.wiring.Probe",
-          "x": 18,
-          "y": 33,
-          "properties": {
-            "Label location": "NORTH",
-            "Label": "",
-            "Direction": "SOUTH",
-            "Bitsize": "32",
-            "Base": "HEXADECIMAL"
-          }
-        },
-        {
-          "name": "com.ra4king.circuitsim.gui.peers.wiring.Probe",
-          "x": 18,
-          "y": 41,
-          "properties": {
-            "Label location": "NORTH",
-            "Label": "",
-            "Direction": "SOUTH",
-            "Bitsize": "32",
-            "Base": "HEXADECIMAL"
-          }
-        },
-        {
-          "name": "com.ra4king.circuitsim.gui.peers.wiring.Probe",
-          "x": 18,
-          "y": 48,
-          "properties": {
-            "Label location": "NORTH",
-            "Label": "",
-            "Direction": "SOUTH",
-            "Bitsize": "32",
-            "Base": "HEXADECIMAL"
-          }
-        },
-        {
-          "name": "com.ra4king.circuitsim.gui.peers.wiring.Probe",
-          "x": 18,
-          "y": 56,
-          "properties": {
-            "Label location": "NORTH",
-            "Label": "",
-            "Direction": "SOUTH",
-            "Bitsize": "32",
-            "Base": "HEXADECIMAL"
-          }
-        },
-        {
-          "name": "com.ra4king.circuitsim.gui.peers.wiring.Probe",
-          "x": 38,
-          "y": 8,
-          "properties": {
-            "Label location": "NORTH",
-            "Label": "",
-            "Direction": "SOUTH",
-            "Bitsize": "32",
-            "Base": "HEXADECIMAL"
-          }
-        },
-        {
-          "name": "com.ra4king.circuitsim.gui.peers.wiring.Probe",
-          "x": 38,
-          "y": 19,
-          "properties": {
-            "Label location": "NORTH",
-            "Label": "",
-            "Direction": "SOUTH",
-            "Bitsize": "32",
-            "Base": "HEXADECIMAL"
-          }
-        },
-        {
-          "name": "com.ra4king.circuitsim.gui.peers.wiring.Probe",
-          "x": 47,
-          "y": 48,
-          "properties": {
-            "Label location": "NORTH",
-            "Label": "",
-            "Direction": "SOUTH",
-            "Bitsize": "32",
-            "Base": "HEXADECIMAL"
-          }
-        },
-        {
-          "name": "com.ra4king.circuitsim.gui.peers.wiring.Probe",
-          "x": 58,
-          "y": 8,
-          "properties": {
-            "Label location": "NORTH",
-            "Label": "",
-            "Direction": "SOUTH",
-            "Bitsize": "32",
-            "Base": "HEXADECIMAL"
-          }
-        },
-        {
-          "name": "com.ra4king.circuitsim.gui.peers.wiring.Probe",
-          "x": 58,
-          "y": 19,
-          "properties": {
-            "Label location": "NORTH",
-            "Label": "",
-            "Direction": "SOUTH",
-            "Bitsize": "32",
-            "Base": "HEXADECIMAL"
-          }
-        },
-        {
-          "name": "com.ra4king.circuitsim.gui.peers.wiring.Probe",
-          "x": 65,
-          "y": 34,
-          "properties": {
-            "Label location": "NORTH",
-            "Label": "",
-            "Direction": "SOUTH",
-            "Bitsize": "32",
-            "Base": "HEXADECIMAL"
-          }
-        },
-        {
-          "name": "com.ra4king.circuitsim.gui.peers.wiring.Probe",
-          "x": 67,
-          "y": 48,
-          "properties": {
-            "Label location": "NORTH",
-            "Label": "",
-            "Direction": "SOUTH",
-            "Bitsize": "32",
-            "Base": "HEXADECIMAL"
-          }
-        },
-        {
-          "name": "com.ra4king.circuitsim.gui.peers.wiring.Probe",
-          "x": 79,
-          "y": 8,
-          "properties": {
-            "Label location": "NORTH",
-            "Label": "",
-            "Direction": "SOUTH",
-            "Bitsize": "32",
-            "Base": "HEXADECIMAL"
-          }
-        },
-        {
-          "name": "com.ra4king.circuitsim.gui.peers.wiring.Probe",
-          "x": 79,
-          "y": 19,
-          "properties": {
-            "Label location": "NORTH",
-            "Label": "",
-            "Direction": "SOUTH",
-            "Bitsize": "32",
-            "Base": "HEXADECIMAL"
-          }
-        },
-        {
-          "name": "com.ra4king.circuitsim.gui.peers.wiring.Probe",
-          "x": 87,
-          "y": 48,
-          "properties": {
-            "Label location": "NORTH",
-            "Label": "",
-            "Direction": "SOUTH",
+            "Label": "key_7",
+            "Value": "1f1e1d1c",
+            "Direction": "EAST",
             "Bitsize": "32",
             "Base": "HEXADECIMAL"
           }
@@ -5200,6 +4816,32 @@
           }
         },
         {
+          "name": "com.ra4king.circuitsim.gui.peers.wiring.ConstantPeer",
+          "x": 47,
+          "y": 9,
+          "properties": {
+            "Label location": "NORTH",
+            "Label": "key_2",
+            "Value": "185207048",
+            "Direction": "EAST",
+            "Bitsize": "32",
+            "Base": "DECIMAL"
+          }
+        },
+        {
+          "name": "com.ra4king.circuitsim.gui.peers.wiring.ConstantPeer",
+          "x": 10,
+          "y": 9,
+          "properties": {
+            "Label location": "NORTH",
+            "Label": "key_0",
+            "Value": "03020100",
+            "Direction": "EAST",
+            "Bitsize": "32",
+            "Base": "HEXADECIMAL"
+          }
+        },
+        {
           "name": "com.ra4king.circuitsim.gui.peers.misc.Text",
           "x": 9,
           "y": 3,
@@ -5208,27 +4850,42 @@
           }
         },
         {
-          "name": "com.ra4king.circuitsim.gui.peers.memory.ROMPeer",
-          "x": 49,
-          "y": 19,
+          "name": "com.ra4king.circuitsim.gui.peers.wiring.ConstantPeer",
+          "x": 9,
+          "y": 34,
           "properties": {
             "Label location": "NORTH",
-            "Contents": "1b1a1918 00000000 14-0",
-            "Label": "key_2",
+            "Label": "constant_0",
+            "Value": "61707865",
+            "Direction": "EAST",
             "Bitsize": "32",
-            "Address bits": "1"
+            "Base": "HEXADECIMAL"
           }
         },
         {
-          "name": "com.ra4king.circuitsim.gui.peers.memory.ROMPeer",
-          "x": 70,
-          "y": 19,
+          "name": "com.ra4king.circuitsim.gui.peers.wiring.ConstantPeer",
+          "x": 9,
+          "y": 49,
           "properties": {
             "Label location": "NORTH",
-            "Contents": "1f1e1d1c 00000000 14-0",
-            "Label": "key_3",
+            "Label": "constant_2",
+            "Value": "79622d32",
+            "Direction": "EAST",
             "Bitsize": "32",
-            "Address bits": "1"
+            "Base": "HEXADECIMAL"
+          }
+        },
+        {
+          "name": "com.ra4king.circuitsim.gui.peers.wiring.ConstantPeer",
+          "x": 9,
+          "y": 57,
+          "properties": {
+            "Label location": "NORTH",
+            "Label": "constant_3",
+            "Value": "6b206574",
+            "Direction": "EAST",
+            "Bitsize": "32",
+            "Base": "HEXADECIMAL"
           }
         },
         {
@@ -5244,15 +4901,16 @@
           }
         },
         {
-          "name": "com.ra4king.circuitsim.gui.peers.memory.ROMPeer",
-          "x": 8,
-          "y": 48,
+          "name": "com.ra4king.circuitsim.gui.peers.wiring.ConstantPeer",
+          "x": 50,
+          "y": 20,
           "properties": {
             "Label location": "NORTH",
-            "Contents": "79622d32 00000000 14-0",
-            "Label": "constant_2",
+            "Label": "key_6",
+            "Value": "1b1a1918",
+            "Direction": "EAST",
             "Bitsize": "32",
-            "Address bits": "1"
+            "Base": "HEXADECIMAL"
           }
         },
         {
@@ -5388,15 +5046,29 @@
           }
         },
         {
-          "name": "com.ra4king.circuitsim.gui.peers.memory.ROMPeer",
-          "x": 8,
-          "y": 33,
+          "name": "com.ra4king.circuitsim.gui.peers.wiring.ConstantPeer",
+          "x": 9,
+          "y": 42,
           "properties": {
             "Label location": "NORTH",
-            "Contents": "61707865 00000000 14-0",
-            "Label": "constant_0",
+            "Label": "constant_1",
+            "Value": "3320646e",
+            "Direction": "EAST",
             "Bitsize": "32",
-            "Address bits": "1"
+            "Base": "HEXADECIMAL"
+          }
+        },
+        {
+          "name": "com.ra4king.circuitsim.gui.peers.wiring.ConstantPeer",
+          "x": 30,
+          "y": 20,
+          "properties": {
+            "Label location": "NORTH",
+            "Label": "key_5",
+            "Value": "17161514",
+            "Direction": "EAST",
+            "Bitsize": "32",
+            "Base": "HEXADECIMAL"
           }
         },
         {
@@ -5410,49 +5082,15 @@
           }
         },
         {
-          "name": "com.ra4king.circuitsim.gui.peers.memory.ROMPeer",
-          "x": 49,
-          "y": 8,
+          "name": "com.ra4king.circuitsim.gui.peers.misc.Text",
+          "x": 113,
+          "y": 147,
           "properties": {
-            "Label location": "NORTH",
-            "Contents": "0b0a0908 00000000 14-0",
-            "Label": "key_2",
-            "Bitsize": "32",
-            "Address bits": "1"
-          }
-        },
-        {
-          "name": "com.ra4king.circuitsim.gui.peers.memory.ROMPeer",
-          "x": 8,
-          "y": 41,
-          "properties": {
-            "Label location": "NORTH",
-            "Contents": "3320646e 00000000 14-0",
-            "Label": "constant_1",
-            "Bitsize": "32",
-            "Address bits": "1"
-          }
-        },
-        {
-          "name": "com.ra4king.circuitsim.gui.peers.memory.ROMPeer",
-          "x": 70,
-          "y": 8,
-          "properties": {
-            "Label location": "NORTH",
-            "Contents": "0f0e0d0c 00000000 14-0",
-            "Label": "key_3",
-            "Bitsize": "32",
-            "Address bits": "1"
+            "Text": "needed to keep hex displays on"
           }
         }
       ],
       "wires": [
-        {
-          "x": 7,
-          "y": 35,
-          "length": 1,
-          "isHorizontal": true
-        },
         {
           "x": 4,
           "y": 135,
@@ -5466,27 +5104,9 @@
           "isHorizontal": false
         },
         {
-          "x": 7,
-          "y": 43,
-          "length": 1,
-          "isHorizontal": true
-        },
-        {
-          "x": 7,
-          "y": 50,
-          "length": 1,
-          "isHorizontal": true
-        },
-        {
           "x": 4,
           "y": 143,
           "length": 18,
-          "isHorizontal": true
-        },
-        {
-          "x": 7,
-          "y": 58,
-          "length": 1,
           "isHorizontal": true
         },
         {
@@ -5688,15 +5308,33 @@
           "isHorizontal": true
         },
         {
+          "x": 27,
+          "y": 88,
+          "length": 5,
+          "isHorizontal": true
+        },
+        {
           "x": 30,
           "y": 92,
-          "length": 15,
+          "length": 2,
           "isHorizontal": true
         },
         {
           "x": 31,
           "y": 94,
           "length": 15,
+          "isHorizontal": true
+        },
+        {
+          "x": 32,
+          "y": 88,
+          "length": 4,
+          "isHorizontal": false
+        },
+        {
+          "x": 32,
+          "y": 92,
+          "length": 13,
           "isHorizontal": true
         },
         {
@@ -7338,12 +6976,6 @@
           "isHorizontal": false
         },
         {
-          "x": 64,
-          "y": 36,
-          "length": 5,
-          "isHorizontal": true
-        },
-        {
           "x": 61,
           "y": 139,
           "length": 5,
@@ -7390,6 +7022,12 @@
           "y": 339,
           "length": 3,
           "isHorizontal": false
+        },
+        {
+          "x": 66,
+          "y": 42,
+          "length": 5,
+          "isHorizontal": true
         },
         {
           "x": 63,
@@ -18902,6 +18540,11 @@
     "NDI0NzcyZWYyYTM2ZDM3YzVjY2M4MTA1ZDFhMThiNDFhNDBhMWNiYTNiMTg2OGU1M2FkNDhhNGI3YTQ5YmI0MAllODFkMjkyNTE5ZjdkYjIzNjAwZjUxZWNhNjk2MTFjNmQyZjgzZjQ2NGJjN2U2YTIwNTBkNTJkNmYxZjgzYzAxCTE3NDg3NjIxMTYxODcJMzkxZTMwM2FjMWViY2RlYzhiYTBlYjdkMmE4ZGZkMTc3M2UyMDZmMzJjMWZiOTRkZTRlODNhY2QzYzI0MjkxYg\u003d\u003d",
     "ZTgxZDI5MjUxOWY3ZGIyMzYwMGY1MWVjYTY5NjExYzZkMmY4M2Y0NjRiYzdlNmEyMDUwZDUyZDZmMWY4M2MwMQk3ZDU4MGVhMjA3NzIxOTI0MmVjYWJlZGJiY2QyNDQ0ZGMxNzkzNmNhYzUyNjdhYmJmMTM4MWYzZDY5NThlODJiCTE3NDg3NjIxNTI5NTUJNmMzZDg2MjljZDIyMWJmNGM5NTAxODAyM2Y0MGMwNWVhOWZmNTdjNDUxMzhkYmJkZDFjNjU2NTQ0MWY2ZGFkOA\u003d\u003d",
     "N2Q1ODBlYTIwNzcyMTkyNDJlY2FiZWRiYmNkMjQ0NGRjMTc5MzZjYWM1MjY3YWJiZjEzODFmM2Q2OTU4ZTgyYgkzNTkyODhhZmZmYmZmNTJlOTgxMzIzMDQ2YjMyYjNhNWFlZTc3MWNiODFjZGM4OWQyNDcxMTY1ZWUzMzJhZjdmCTE3NDg3NjIxOTA5MzgJZjc1ZjE0ZWU3NDk2MzlhMWY1OGQyMDk5YmJiNjVkNjMwNzRmODZlMTVkYjBkZTIyZDc5M2VkM2M4NTk5YjUwMg\u003d\u003d",
-    "MzU5Mjg4YWZmZmJmZjUyZTk4MTMyMzA0NmIzMmIzYTVhZWU3NzFjYjgxY2RjODlkMjQ3MTE2NWVlMzMyYWY3Zgk1YWEwNTNiZWU2M2EyNjBiM2Y0YjA5ZGQ5MTU3NjVhYjNjMjM4NWE3YzJlNzkxMzAwYjM4OGYyMmVjYWMzZWU3CTE3NDg3NjI2MzkzMzYJMTc0MzZjMzRhZDZkMGYwYWYzMTg2YjNkNDgzOTJmMGIyN2U2NDNkY2UyYzFkYWZlNGFiYjM2ZDZhZjQ5ZGYyOA\u003d\u003d"
+    "MzU5Mjg4YWZmZmJmZjUyZTk4MTMyMzA0NmIzMmIzYTVhZWU3NzFjYjgxY2RjODlkMjQ3MTE2NWVlMzMyYWY3Zgk1YWEwNTNiZWU2M2EyNjBiM2Y0YjA5ZGQ5MTU3NjVhYjNjMjM4NWE3YzJlNzkxMzAwYjM4OGYyMmVjYWMzZWU3CTE3NDg3NjI2MzkzMzYJMTc0MzZjMzRhZDZkMGYwYWYzMTg2YjNkNDgzOTJmMGIyN2U2NDNkY2UyYzFkYWZlNGFiYjM2ZDZhZjQ5ZGYyOA\u003d\u003d",
+    "NWFhMDUzYmVlNjNhMjYwYjNmNGIwOWRkOTE1NzY1YWIzYzIzODVhN2MyZTc5MTMwMGIzODhmMjJlY2FjM2VlNwk4NzRkZjU1OWEwMjc5YWExNTM1MjM5OTdiNWQ0MzA3ZjgzNGY1NjEwMWUyMDA0MjlhMTBmMjgyM2YxNjM4YTczCTE3NDg3NjMyMTg3NTAJZjIyZGY0YTU1ODkyNmNjMDJhNmM3Y2I0MTZlM2VhNGU3NzM5NTM4ZWFkMjMzNjMzNGEyODc0MmNlYTJjNWM0Yw\u003d\u003d",
+    "ODc0ZGY1NTlhMDI3OWFhMTUzNTIzOTk3YjVkNDMwN2Y4MzRmNTYxMDFlMjAwNDI5YTEwZjI4MjNmMTYzOGE3MwkyNDAyMDcyODY1M2FiYjBhZDBhNWM4YzBhNmY2Yzc4NGQ1MWRkMzUwYmVjZmMxNDkwYmE1ZjJlYzNlNDYwYTA3CTE3NDg3NjM3MTAyMDMJYzE2ZmE4YjY0MjZjZGViY2UyZDM3M2MxMmE2Yzc2ZjA5NDg0OTAzMWMwY2M3Y2E0YzBkMDNkZjdkOGY0ZjZkZQ\u003d\u003d",
+    "MjQwMjA3Mjg2NTNhYmIwYWQwYTVjOGMwYTZmNmM3ODRkNTFkZDM1MGJlY2ZjMTQ5MGJhNWYyZWMzZTQ2MGEwNwkxZTM3ZjAwZmJiY2RiNmRmOTVhNTQxMDRkNTlkZDU0YWI0OTMwOGMwY2JjNTliNDc4MzljNWI0ZDExZDViZGI3CTE3NDg3NjM4MzA4ODUJNjgxNzEzMzRlYzBmODJjNTUwNzViNWVmZWZlYzBlMzc5OWY4ODE3NDY0YWMxNmJhOTIyNmIzYjVjMzg5ZGM5OQ\u003d\u003d",
+    "MWUzN2YwMGZiYmNkYjZkZjk1YTU0MTA0ZDU5ZGQ1NGFiNDkzMDhjMGNiYzU5YjQ3ODM5YzViNGQxMWQ1YmRiNwk1YTk5NzhiMjRhMDFjMGVmMDkzZTY3MTY0ZDg4MzE5ZWNlNzdlZjVhMjQ0N2Y4OWJlYWMxYzU1Njc0OWQ3YzZlCTE3NDg3NjM5Mjg4OTYJYjA0ZmZhOTM0NTIxNGZlZmM4NzA0YmI0ODY2ZTYzNTc3NDQ5OGE4ZWVmYWE5ODY1M2IxNTIyMmM5YTc3ZDBmOQ\u003d\u003d",
+    "NWE5OTc4YjI0YTAxYzBlZjA5M2U2NzE2NGQ4ODMxOWVjZTc3ZWY1YTI0NDdmODliZWFjMWM1NTY3NDlkN2M2ZQkwYWJkYmU1NTY1NmRhYzIxZWU1NWNlZmFiMDczYWE2MGE3YThhNWU0ZjFhNjQ5MzhlOGJkYWQ3MjU4YmVjNDk1CTE3NDg3NjM5NzMwOTcJNTZhMmUzMmVlYzY0YTQ3YTkwZDYzMTkyNDZiNDMyNGFmNDM5Y2M4YzU5OWJkNTYwMTYzZWRkYmRiNzI0NjE0MQ\u003d\u003d"
   ]
 }
