@@ -35,37 +35,35 @@ void chacha_block(uint32_t out[16], uint32_t const in[16])
 }
 
 int main() {
-    //given a key, constant, counter, and nonce for the initial state
-    //given a hex output that represents the ASCII of the plaintext 
-
-    //output the encrypted ascii hex
-
-    const uint32_t chachaConstant[4] = {
+	const uint32_t chachaConstant[4] = {
 		0x61707865,  // "expa"
 		0x3320646e,  // "nd 3"
 		0x79622d32,  // "2-by"
 		0x6b206574   // "te k"
 	};
 
-	uint32_t key[8] = {
-		0x03020100,
-		0x07060504,
-		0x0b0a0908,
-		0x0f0e0d0c,
-		0x13121110,
-		0x17161514,
-		0x1b1a1918,
-		0x1f1e1d1c
-	};
+	//chat GPT
+	uint32_t key[8], counter[1], nonce[3];
 
-	uint32_t counter[1] = {0x00000001};
-
-	uint32_t nonce[3] = {
-		0x09000000,
-		0x4a000000,
-		0x00000000
-	};
-
+    FILE *inputFile = fopen("inputs.txt", "r");
+    if (!inputFile) {
+        perror("Failed to open inputs.txt");
+        return 1;
+    }
+    char line[256];
+    while (fgets(line, sizeof(line), inputFile)) {
+        if (strncmp(line, "key:", 4) == 0) {
+            sscanf(line + 4, "%x %x %x %x %x %x %x %x",
+                   &key[0], &key[1], &key[2], &key[3],
+                   &key[4], &key[5], &key[6], &key[7]);
+        } else if (strncmp(line, "counter:", 8) == 0) {
+            sscanf(line + 8, "%x", &counter[0]);
+        } else if (strncmp(line, "nonce:", 6) == 0) {
+            sscanf(line + 6, "%x %x %x", &nonce[0], &nonce[1], &nonce[2]);
+        }
+    }
+    fclose(inputFile);
+	//end chatGPT
 
 	uint32_t initialState[16] = {
     chachaConstant[0], chachaConstant[1], chachaConstant[2], chachaConstant[3],
@@ -74,43 +72,55 @@ int main() {
     nonce[0], nonce[1], nonce[2]
 	};
 
+	printf("\n");
+	printf("====Initial state of matrix====\n");
+	for (int i = 0; i < 16; i++) {
+		printf("%08x ", initialState[i]);
+		if ((i + 1) % 4 == 0) printf("\n");
+	}
+	printf("\n");
+	printf("\n");
+	printf("\n");
+
 	uint32_t out[16];
 	chacha_block(out, initialState);
 
+	printf("Keystream: \n");
+	for (int i = 0; i < 16; i++) {
+		printf("%08x \n", out[i]);
+	}
+	printf("\n");
+	printf("\n");
+	printf("\n");
     
-    //the following section was generated with ChatGPT. It opens the .dat file and creates a uint32_t[16] from it.
+    //the following section was generated with ChatGPT. It opens the .dat file and creates a uint32_t[16] from it. 
     uint32_t plaintext[16] = {0};
-
-    FILE *fp = fopen("IO/hexoutput.dat", "r");
+    FILE *fp = fopen("hexoutput.dat", "r");
     if (!fp) {
         perror("Failed to open hexoutput.dat");
         return 1;
     }
-
-    char line[16];
+    char hexLine[16];
     int i = 0;
-    while (fgets(line, sizeof(line), fp) && i < 16) {
+    while (fgets(hexLine, sizeof(hexLine), fp) && i < 16) {
         // Remove newline if present
-        line[strcspn(line, "\n")] = 0;
+        hexLine[strcspn(hexLine, "\n")] = 0;
 
-        if (strlen(line) == 8) {
-            uint32_t value = (uint32_t)strtoul(line, NULL, 16);
+        if (strlen(hexLine) == 8) {
+            uint32_t value = (uint32_t)strtoul(hexLine, NULL, 16);
             plaintext[i++] = value;
         }
     }
-
     fclose(fp);
     //ChatGPT generation block ends : ) 
 
 
 
     uint32_t ciphertext[16];
-
-    printf("Behavior of the display is only defined for the length of the input plaintext.\n");
-    printf("The ciphertext to be displayed in circuit sim should be as follows: \n");
+    printf("================The ciphertext to be displayed in circuit sim should be as follows================\n");
     for (int i = 0; i < 16; i++) {
         ciphertext[i] = plaintext[i] ^ out[i];
-        printf("%x\n", ciphertext[i]);
+        printf("%08x\n", ciphertext[i]);
     }
 
 }
