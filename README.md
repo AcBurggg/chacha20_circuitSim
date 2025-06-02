@@ -25,7 +25,7 @@ knowledge, the wikipedia page describes creator Daniel Bernstein's implementatio
 design. This slightly altered version decreases the length of the counter from 64-bits to 32-bits and increases the length of the nonce from 64-bits to 96-bits. 
 Only the initial matrix state changes - the logic of the block_function is unchanged.
 
-Currently, the "intitial state" of the input matrix is represented by 16 32-bit circuitSim constant pins at the top of the main subcircuit. The fields that can be altered are as follows: key0-key7, counter, and nonce0-2. The constant is a nothing-up-my-sleeve-number and should not be changed to maintain integriy. It is the ASCII value of "expand 32-byte k" which describes what the block function is doing. Its taking a smaller key and turning it into a large pseudorandom keystream using Add, Rotate, and XOR operations. 
+Currently, the "intitial state" of the input matrix is represented by 16 32-bit circuitSim constant pins at the top of the main subcircuit. The fields that can be altered are as follows: key0-key7, counter, and nonce0-2. The constant is a nothing-up-my-sleeve-number and should not be changed to maintain integriy. It is the ASCII value of "expand 32-byte k" which describes what the block function is doing. It's taking a smaller key and turning it into a large pseudorandom keystream using Add, Rotate, and XOR operations. 
 
 The block function's purpose is to generate a long keystream that can then be XOR'd with a plaintext input to get a ciphertext. The block function uses this counter (CTR) mode of operation just to generate the keystream. The actual encryption itself can be thought of as a stream cipher. 
 
