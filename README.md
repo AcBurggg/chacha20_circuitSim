@@ -9,9 +9,9 @@
 
 4. In this same directory, run the following command "./run.sh". Ensure that the directory now contains a file called "hexoutput.dat" and that the terminal is populated with some relevant information regarding your encrypting set-up/ expected ciphertext. 
 
-5. Open chacha20.sim in circuitSim. On the subcircuit titled "main" find the ROM with the label "PLAINTEXT HERE!!". Right click it and select "load from file". Navigate to and select hexoutput.dat". 
+5. Open chacha20.sim in circuitSim. On the subcircuit titled "main" find the ROM with the label "PLAINTEXT HERE!!". Right click it and select "load from file". Navigate to and select hexoutput.dat. 
 
-6. Ensure that simulation is enabled in the file. Scroll down and find the set of 
+6. Ensure that simulation is enabled in the file. Scroll down and find the set of red hex displays. Start the simulation by manually shift clicking the green clock icon or by pressing Command+K. You should see the expected ciphertext values appear on these displays. 
 
 
 ## Fun Background Information
