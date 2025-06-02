@@ -1,4 +1,4 @@
-# chacha20_circuitSim Encryption
+# Chacha20 Encryption in CircuitSim : )
 
 ## User Guide
 1. Traverse to ./IO directory
@@ -15,7 +15,9 @@
 
 
 ## Fun Background Information
-chacha20.sim can be opened using CS2110-CircuitSim.jar - a modification of the software found [here](https://github.com/ra4king/CircuitSim).
+Chacha20 is a symmetric encryption cipher that is used to ensure confidentiality of messages over an unsecure channel. "Symmetric" just means that both encryption and decryption are performed using the same key that is known to both communicating parties (oftentimes called Alice and Bob...aka point A and point B). This key should never be shared publically (even though it is flaunted wildly in the circuitry and scripts here, don't do this in real life. This is just for education). It's been adopted by TLS and is faster than AES on devices such as mobile phones that don't have dedicated AES accelerators. I think it is pretty cool. 
+
+chacha20.sim can be opened using CS2110-CircuitSim.jar (present in this repository)- a modification of the software found [here](https://github.com/ra4king/CircuitSim). ...it should also work with other versions of circuitSim. 
 
 In this file is a circuitry implementation of the chacha20 block function as described in this [RFC document](https://www.rfc-editor.org/rfc/rfc7539). 
 Note that a more broad overview can be found on the [Salsa20 wikipedia page](https://en.wikipedia.org/wiki/Salsa20#ChaCha_variant). To the best of my
@@ -23,10 +25,12 @@ knowledge, the wikipedia page describes creator Daniel Bernstein's implementatio
 design. This slightly altered version decreases the length of the counter from 64-bits to 32-bits and increases the length of the nonce from 64-bits to 96-bits. 
 Only the initial matrix state changes - the logic of the block_function is unchanged.
 
-Currently, the "intitial state" of the input matrix is represented by 16 32-bit circuitSim constant pins at the top of the main subcircuit. The fields that can be altered are as follows: key0-key7, counter, and nonce0-2. The constant is a nothing-up-my-sleeve-number and should not be changed to maintain integriy. It is the ASCII value of "expand 32-byte k".
+Currently, the "intitial state" of the input matrix is represented by 16 32-bit circuitSim constant pins at the top of the main subcircuit. The fields that can be altered are as follows: key0-key7, counter, and nonce0-2. The constant is a nothing-up-my-sleeve-number and should not be changed to maintain integriy. It is the ASCII value of "expand 32-byte k" which describes what the block function is doing. Its taking a smaller key and turning it into a large pseudorandom keystream using Add, Rotate, and XOR operations. 
 
-The block function's purpose is to generate a long keystream that can then be XOR'd with a plaintext input to get a ciphertext. Ciphers using this counter (CTR) mode of operation are thus quite similar to stream ciphers that use a one-time-pad. The "block" part is merely for generating the keystream. 
+The block function's purpose is to generate a long keystream that can then be XOR'd with a plaintext input to get a ciphertext. The block function uses this counter (CTR) mode of operation just to generate the keystream. The actual encryption itself can be thought of as a stream cipher. 
 
-In addition to generating this keystream, the main subcircuit also supports the actual encryption process of a provided plaintext string on red hex displays. 
+In addition to generating this keystream, the main subcircuit also supports the actual encryption process of a provided plaintext string on red hex displays (process described above). 
 
-Currently, the circuitry is able to generate 512 bits of keystream at once meaning that strings to be encrypted should be limited to (512 / 8 bits per ascii char) 64 characters or fewer. In real life, the benefit of CTR would allow 2^32 * 512 bits to be generated easily by merely incrementing the counter value and running the block function again- this functionality has not (yet) been implemented in my .sim file. 
+Currently, the circuitry is able to generate 512 bits of keystream at once meaning that strings to be encrypted should be limited to (512 / 8 bits per ascii char) 64 characters or fewer. In real life, the benefit of the CTR mode would allow 2^32 * 512 bits to be generated easily by merely incrementing the counter value and running the block function again- this functionality has not (yet) been implemented in my .sim file. 
+
+[Here](https://www.youtube.com/watch?v=UeIpq-C-GSA&t=35s&ab_channel=Computerphile) is a great video by Computerphile that describes the block function well. 
