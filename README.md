@@ -5,7 +5,7 @@
 
 2. Update inputs.txt with your desired inputs. The default values represent the test vector found [here](https://www.rfc-editor.org/rfc/rfc7539#page-9). Your key should be 64 hex characters long for a total of 256 bits. Your counter should be 8 hex characters long. Your nonce should be 24 hex characters long. DO NOT DELETE THE START OF EACH LINE (i.e. "key: ", "counter: ", etc). Your user-inputted values should follow the same format as the example in which each set of eight hex characters has a space between it. [🚨WARNING WARNING WARNING🚨] If you change the key/counter/nonce values here, you will also need to update them in the main subcircuit of chacha20.sim. If you're trying to avoid tedious work, just leave these default values. 
 
-3. Update line 4 of inputs.txt with a plaintext of your choosing. In other words, replace the [hello i'm andy] part with the string you'd like to encrypt. Again, do not delete the start of the line ("plaintext: ") Leave the quotation marks around your string. 
+3. Update line 4 of inputs.txt with a plaintext of your choosing. In other words, replace the [hello i'm andy] part with the string you'd like to encrypt. Again, do not delete the start of the line ("plaintext: ") Leave the quotation marks around your string. Your string should be 64 characters or fewer. 
 
 4. In this same directory, run the following command "./run.sh". Ensure that the directory now contains a file called "hexoutput.dat" and that the terminal is populated with some relevant information regarding your encrypting set-up/ expected ciphertext. 
 
