@@ -17,7 +17,7 @@
 ## Fun Background Information
 Chacha20 is a symmetric encryption cipher that is used to ensure confidentiality of messages over an unsecure channel. "Symmetric" just means that both encryption and decryption are performed using the same key that is known to both communicating parties (oftentimes called Alice and Bob...aka point A and point B). This key should never be shared publically (even though it is flaunted wildly in the circuitry and scripts here, don't do this in real life. This is just for education). It's been adopted by TLS and is faster than AES on devices such as mobile phones that don't have dedicated AES accelerators. I think it is pretty cool. 
 
-chacha20.sim can be opened using CS2110-CircuitSim.jar (present in this repository)- a modification of the software found [here](https://github.com/ra4king/CircuitSim). ...it should also work with other versions of circuitSim. 
+chacha20.sim can be opened using CS2110-CircuitSim.jar (present in this repository)- a modification of the software found [here](https://github.com/ra4king/CircuitSim). It should also work with other versions of circuitSim... but no guarantees. 
 
 In this file is a circuitry implementation of the chacha20 block function as described in this [RFC document](https://www.rfc-editor.org/rfc/rfc7539). 
 Note that a more broad overview can be found on the [Salsa20 wikipedia page](https://en.wikipedia.org/wiki/Salsa20#ChaCha_variant). To the best of my
