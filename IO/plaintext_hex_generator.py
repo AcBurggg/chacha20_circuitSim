@@ -1,6 +1,6 @@
 #generated using ChatGPT. 
 #creates the .dat file with the hex values of the plaintext string that is to be encrypted
-#can be loaded directly into ROM. Also used in expectedOutput.c in order to get the expected
+#can be loaded directly into ROM. Also used in expectedOutput.c in order to get the expected ciphertext
 
 def extract_plaintext_from_file(file_path):
     with open(file_path, 'r', encoding='utf-8') as f:

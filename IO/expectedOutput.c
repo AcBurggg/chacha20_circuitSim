@@ -1,3 +1,4 @@
+//Source: https://en.wikipedia.org/wiki/Salsa20#ChaCha_variant 
 #include <stdint.h>
 #include <stdio.h>
 #include <stdlib.h>
@@ -63,7 +64,7 @@ int main() {
         }
     }
     fclose(inputFile);
-	//end chatGPT
+	//end chatGPT block
 
 	uint32_t initialState[16] = {
     chachaConstant[0], chachaConstant[1], chachaConstant[2], chachaConstant[3],
@@ -112,14 +113,24 @@ int main() {
         }
     }
     fclose(fp);
-    //ChatGPT generation block ends : ) 
+    //ChatGPT generation block ends
+
+	// printf("Plaintext matrix:");
+	// for(int i = 0; i < 16; i++) {
+	// 	printf("%08x ", plaintext[i]);
+	// }
+	// printf("\n");
 
 
 
     uint32_t ciphertext[16];
     printf("================The ciphertext to be displayed in circuit sim should be as follows================\n");
     for (int i = 0; i < 16; i++) {
-        ciphertext[i] = plaintext[i] ^ out[i];
+		if (plaintext[i] == 0) {
+			ciphertext[i] = 0;
+		} else {
+        	ciphertext[i] = plaintext[i] ^ out[i];
+		}
         printf("%08x\n", ciphertext[i]);
     }
 
