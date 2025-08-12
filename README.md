@@ -1,5 +1,5 @@
 # Chacha20 Encryption in CircuitSim : )
-
+HELPFUL INFORMATION MIGHT BE FOUND HERE https://acburggg.github.io/Andrew-thoughts/subpages/chacha20CircSim.html (unless I changed the url at some point...go to that website and find the article titled 'chacha20 encryption in circuit sim' or something along those lines)
 ## User Guide
 1. Traverse to ./IO directory
 
