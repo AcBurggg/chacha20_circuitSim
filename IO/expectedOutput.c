@@ -34,6 +34,7 @@ void chacha_block(uint32_t out[16], uint32_t const in[16])
 	for (i = 0; i < 16; ++i)
 		out[i] = x[i] + in[i];
 }
+// end of wikipedia code
 
 int main() {
 	const uint32_t chachaConstant[4] = {
